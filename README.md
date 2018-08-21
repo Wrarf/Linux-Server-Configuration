@@ -3,13 +3,14 @@
 
 ## Packages Installed
 
-* = using pip
-
 - apache2
 - libapache2-mod-wsgi
 - postgresql
 - python-pip
-- sqlalchemy *
-- flask *
-- oauth2client *
-- requests *
+
+(the following have been installed using pip)
+
+- sqlalchemy
+- flask
+- oauth2client
+- requests
