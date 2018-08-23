@@ -16,12 +16,18 @@ And wrote inside the new file
 
 ### Created a SSH keypair for grader
 Generated with ssh-keypair and added the public key to .ssh/authorized_keys
+
 Changed authorizations
 ~~~
 chmod 700 .ssh
 chmod 644 .ssh/authorized_keys
 ~~~
 (.ssh and .ssh/authorized_keys have been created by grader)
+
+Reloaded SSH:
+~~~
+sudo service ssh restart
+~~~
 
 ## Packages Installed
 
