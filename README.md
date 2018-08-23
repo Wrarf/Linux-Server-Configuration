@@ -29,6 +29,30 @@ Reloaded SSH:
 sudo service ssh restart
 ~~~
 
+### Changed the SSH port from 22 to 2200
+In /etc/ssh/sshd_config changed
+>\# What ports, IPs and protocols we listen for
+
+>Port 22
+
+To
+
+>\# What ports, IPs and protocols we listen for
+
+>Port 2200
+
+### Configured the Uncomplicated Firewall (UFW)
+~~~
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 2200
+sudo ufw allow 80
+sudo ufw allow 123
+sudo ufw allow ssh
+sudo ufw allow www
+sudo ufw enable
+~~~
+
 ## Packages Installed
 
 - apache2
