@@ -71,6 +71,28 @@ ALTER ROLE catalog WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
 ~~~
 
+### Setup Catalog Project
+Cloned the project in /var/www/Catalog
+
+Renamed Application.py (in /var/www/Catalog/Catalog)  to \__\__init____.py
+~~~
+sudo mv application.py __init__.py
+~~~
+
+Removed Vagrantfile
+~~~
+sudo rm Vagrantfile
+~~~
+
+In \__\__init____.py, populate_db.py and database_setup.py changed from 
+~~~
+engine = create_engine('sqlite:///catalog.db')
+~~~
+To
+~~~
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
+~~~
+
 
 
 ## Packages Installed
