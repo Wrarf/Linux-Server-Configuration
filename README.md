@@ -93,7 +93,10 @@ To
 engine = create_engine('postgresql://catalog:password@localhost/catalog')
 ~~~
 
-
+Initialized the database
+~~~
+sudo python populate_db.py
+~~~
 
 ## Packages Installed
 
