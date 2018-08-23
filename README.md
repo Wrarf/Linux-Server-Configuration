@@ -3,18 +3,18 @@
 
 ## Changes Made (Summary)
 
-### Created a user named grader:
+### Created A User Named Grader
 ~~~ 
 sudo adduser grader
 ~~~
-### Gave to grader the permission to sudo:
+### Gave To Grader The Permission To Sudo
 ~~~
 sudo nano /etc/sudoers.d/grader
 ~~~
 And wrote inside the new file
 > grader ALL=(ALL:ALL) ALL
 
-### Created a SSH keypair for grader
+### Created A SSH Keypair For Grader
 Generated with ssh-keypair and added the public key to .ssh/authorized_keys
 
 Changed authorizations
@@ -29,7 +29,7 @@ Reloaded SSH:
 sudo service ssh restart
 ~~~
 
-### Changed the SSH port from 22 to 2200
+### Changed The SSH Port From 22 To 2200
 In /etc/ssh/sshd_config changed
 >\# What ports, IPs and protocols we listen for
 
@@ -41,7 +41,7 @@ To
 
 >Port 2200
 
-### Configured the Uncomplicated Firewall (UFW)
+### Configured The Uncomplicated Firewall (UFW)
 ~~~
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
@@ -52,6 +52,26 @@ sudo ufw allow ssh
 sudo ufw allow www
 sudo ufw enable
 ~~~
+
+### Configured The Local Timezone To UTC
+~~~
+sudo timedatectl set-timezone UTC
+~~~
+
+### Configured PostgreSQL
+~~~
+sudo su - postgres
+psql
+~~~
+Created a new database and user in PostgreSQL shell:
+~~~
+CREATE DATABASE catalog;
+CREATE USER catalog;
+ALTER ROLE catalog WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
+~~~
+
+
 
 ## Packages Installed
 
