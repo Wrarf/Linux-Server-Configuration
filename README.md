@@ -125,6 +125,17 @@ Enabled the virtual host
 sudo a2ensite Catalog
 ~~~
 
+### Created The .wsgi File
+Created /var/www/Catalog/catalog.wsgi and wrote inside it
+~~~
+#!/usr/bin/python
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/Catalog/")
+~~~
+
+
 ## Packages Installed
 
 - apache2
