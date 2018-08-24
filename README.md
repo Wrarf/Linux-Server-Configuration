@@ -98,6 +98,33 @@ Initialized the database
 sudo python populate_db.py
 ~~~
 
+### Configured The Virtual Host
+Created /etc/apache2/sites-available/FlaskApp.conf and wrote inside it
+~~~
+<VirtualHost *:80>
+        ServerName 18.197.157.77
+        ServerAdmin capitantaka@gmail.com
+        WSGIScriptAlias / /var/www/Catalog/catalog.wsgi
+        <Directory /var/www/Catalog/Catalog/>
+                Order allow,deny
+                Allow from all
+        </Directory>
+        Alias /static /var/www/Catalog/Catalog/static
+        <Directory /var/www/Catalog/Catalog/static/>
+                Order allow,deny
+                Allow from all
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+~~~
+
+Enabled the virtual host
+~~~
+sudo a2ensite Catalog
+~~~
+
 ## Packages Installed
 
 - apache2
