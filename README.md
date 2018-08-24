@@ -111,3 +111,4 @@ sudo python populate_db.py
 - flask
 - oauth2client
 - requests
+- psycopg2
