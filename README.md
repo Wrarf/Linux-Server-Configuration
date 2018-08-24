@@ -101,6 +101,16 @@ To
 ~~~
 app.run(host='0.0.0.0', port=80)
 ~~~
+And
+~~~
+CLIENT_ID = json.loads(
+    open('client_secrets.json', 'r').read())['web']['client_id']
+~~~
+To
+~~~
+with app.open_resource('client_secrets.json') as f:    
+    CLIENT_ID = json.load(f)['web']['client_id']
+~~~
 
 Initialized the database
 ~~~
