@@ -93,6 +93,15 @@ To
 engine = create_engine('postgresql://catalog:password@localhost/catalog')
 ~~~
 
+In \__\__init____.py changed from
+~~~
+app.run(host='0.0.0.0', port=8000)
+~~~
+To
+~~~
+app.run(host='0.0.0.0', port=80)
+~~~
+
 Initialized the database
 ~~~
 sudo python populate_db.py
