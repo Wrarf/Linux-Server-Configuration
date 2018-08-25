@@ -1,5 +1,8 @@
 # Linux Server Configuration
 
+This is the last project for the Full Stack nanodegree on Udacity, I had to configure a web server to host my Catalog application.
+
+You can access to the application here: http://18.197.157.77.xip.io
 
 ## Changes Made (Summary)
 
