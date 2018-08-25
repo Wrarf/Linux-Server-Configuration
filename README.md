@@ -112,6 +112,12 @@ with app.open_resource('client_secrets.json') as f:
     CLIENT_ID = json.load(f)['web']['client_id']
 ~~~
 
+And modified
+~~~
+oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+~~~
+According to [this](https://stackoverflow.com/questions/44742566/wsgi-cant-find-file-in-same-directory-in-app?rq=1).
+
 Initialized the database
 ~~~
 sudo python populate_db.py
@@ -177,3 +183,4 @@ application.secret_key = 'Add your secret key'
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604
 https://medium.com/@mohammedhammoud/postgresql-create-user-create-database-grant-privileges-access-aabb2507c0aa
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+https://stackoverflow.com/questions/44742566/wsgi-cant-find-file-in-same-directory-in-app?rq=1
