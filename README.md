@@ -135,7 +135,7 @@ sudo python populate_db.py
 ~~~
 
 ### Configured The Virtual Host
-Created /etc/apache2/sites-available/FlaskApp.conf and wrote inside it
+Created /etc/apache2/sites-available/Catalog.conf and wrote inside it
 ~~~
 <VirtualHost *:80>
         ServerName 18.197.157.77
