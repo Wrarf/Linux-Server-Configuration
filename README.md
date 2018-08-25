@@ -2,7 +2,7 @@
 
 This is the last project for the Full Stack nanodegree on Udacity, I had to configure a web server to host my Catalog application.
 
-You can access to the application here: http://18.197.157.77.xip.io
+You can access to the application here: http://18.197.157.77
 
 ## Changes Made (Summary)
 
@@ -138,7 +138,7 @@ sudo python populate_db.py
 Created /etc/apache2/sites-available/Catalog.conf and wrote inside it
 ~~~
 <VirtualHost *:80>
-        ServerName 18.197.157.77
+        ServerName 18.197.157.77.xip.io
         ServerAdmin capitantaka@gmail.com
         WSGIScriptAlias / /var/www/Catalog/catalog.wsgi
         <Directory /var/www/Catalog/Catalog/>
