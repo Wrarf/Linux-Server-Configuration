@@ -32,7 +32,7 @@ Reloaded SSH:
 sudo service ssh restart
 ~~~
 
-### Changed The SSH Port From 22 To 2200
+### Changed The SSH Port From 22 To 2200 And Prohibited Remote Login As Root
 In /etc/ssh/sshd_config changed
 >\# What ports, IPs and protocols we listen for
 
@@ -43,6 +43,14 @@ To
 >\# What ports, IPs and protocols we listen for
 
 >Port 2200
+
+And 
+
+>PermitRootLogin prohibit-password
+
+To
+
+>PermitRootLogin no
 
 ### Configured The Uncomplicated Firewall (UFW)
 ~~~
